@@ -28,6 +28,12 @@ jobs:
           api-level: 34
           ndk-version: 26.1.10909125
 
+      # Новый шаг: Скачивает официальный gradle-wrapper.jar, если Git его проигнорировал
+      - name: Download Gradle Wrapper JAR
+        run: |
+          mkdir -p gradle/wrapper
+          curl -L -o gradle/wrapper/gradle-wrapper.jar https://raw.githubusercontent.com/gradle/gradle/v8.2.0/gradle/wrapper/gradle-wrapper.jar
+
       - name: Grant Execute Permission for Gradlew
         run: chmod +x gradlew
 
