@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_dark">#0A0E1F</color>
+    <color name="bar_dark">#131929</color>
+    <color name="accent">#3D9CF5</color>
+    <color name="text_primary">#ECEDEE</color>
+    <color name="text_hint">#555E7A</color>
+    <color name="bubble_sent">#2B5278</color>
+    <color name="bubble_recv">#1E2B3C</color>
+    <color name="status_online">#4CAF50</color>
+    <color name="status_pending">#FFB300</color>
+</resources>
