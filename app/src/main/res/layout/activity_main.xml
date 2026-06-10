@@ -56,12 +56,17 @@
         </LinearLayout>
     </LinearLayout>
 
-    <!-- ═══ Hidden operational WebView (1×1) ═══ -->
+    <!-- 
+        ═══ Hidden operational WebView (1×1) ═══ 
+        ВАЖНО: Должен быть android:visibility="visible" и android:alpha="0.0".
+        Иначе Chromium замораживает сетевые запросы воркера, выдавая net::ERR_FAILED.
+    -->
     <WebView
         android:id="@+id/webView"
         android:layout_width="1dp"
         android:layout_height="1dp"
-        android:visibility="invisible"
+        android:visibility="visible"
+        android:alpha="0.0"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
 
@@ -119,8 +124,8 @@
         android:orientation="horizontal"
         android:elevation="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintStart_of="parent"
+        app:layout_constraintEnd_of="parent">
 
         <EditText
             android:id="@+id/etMessage"
